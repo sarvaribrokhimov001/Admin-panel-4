@@ -63,6 +63,7 @@ elMenu.addEventListener("click" , ()=> {
           <i class="ri-settings-2-line dashboard__menu__element__icon"></i>
           <p class="dashboard__menu__element__text"> Settings  </p>
         </div> <!-- dashboard__menu__element__icon__and__text -->
+        <button class="main__cancel__btn cancel__btn"> Cancel </button>
       </div> <!-- dashboard__menu__element -->
     `;
     isOpen = true;
@@ -195,11 +196,17 @@ elForm.addEventListener('submit' , (e)=> {
 
 
 const editModal = document.querySelector('.modal__window__edit');
+const cancelBtn = document.querySelector('.cancel__btn__2');
 
 const editProduct = (id)=> {
   editModal.classList.toggle('hidden');
   editId = id;
 };
+
+cancelBtn.addEventListener('click' , (e)=> {
+  e.preventDefault();
+  editModal.classList.toggle("hidden");
+});
 
 const editForm = document.querySelector('.editForm');
 editForm.addEventListener('submit' , (e) => {
@@ -232,7 +239,7 @@ editForm.addEventListener('submit' , (e) => {
           style: {
             background: "linear-gradient(to right, black, black)",
             fontFamily: "Poppins, sans-serif",
-            boxShadow: "0 0 12px rgba(0, 255, 0, 0.6)",
+            boxShadow: "0 0 15px rgba(255, 193, 7, 0.8)",
             width: "400px",
             borderRadius: "15px",
             color: "yellow"
@@ -240,3 +247,23 @@ editForm.addEventListener('submit' , (e) => {
       }).showToast();
   });
 });
+
+
+// const mainCancelBtn = document.querySelector('.main__cancel__btn');
+// const dashboard__menu__element = document.querySelector('.dashboard__menu__element');
+
+// mainCancelBtn.addEventListener('click' , (e)=> {
+//   e.preventDefault();
+//   dashboard__menu__element.classList.toggle("hidden");
+// });
+
+
+
+
+
+
+
+
+
+
+
