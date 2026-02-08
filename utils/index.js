@@ -64,7 +64,6 @@
   }).showToast();
 
   const elForm = document.querySelector(".index__form");
-
   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{}\[\]:;"'<>.,?/~]).{8,}$/;
   const usernameRegex = /^[a-zA-Z0-9]{5,15}$/;

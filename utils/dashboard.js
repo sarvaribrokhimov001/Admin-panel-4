@@ -17,6 +17,7 @@ Toastify({
     }
   }).showToast();
 
+
 let editId; 
 const logout = document.querySelector(".dashboard__logout");
 
@@ -82,8 +83,7 @@ fetch(API).then(response => response.json()).then(data => {
 });
 
 function showData(data) {
-
-  data.map(({title , id , price , image , description , category} , index)=> {
+  data.map(({title , id , price , image , description , category})=> {
 
     tableBody.innerHTML+= `
     
@@ -107,7 +107,6 @@ function showData(data) {
 
 
 const deleteProduct = (id)=> {
-
   fetch(`https://fakestoreapi.com/products/${id}` , {
     method: "DELETE",
   })
@@ -219,7 +218,7 @@ editForm.addEventListener('submit' , (e) => {
   const image = editForm['image'].value.trim();
 
   const elements = {
-     title , price , description , category , image
+    title , price , description , category , image
   };
 
   fetch(`https://fakestoreapi.com/products/${editId}` , {
@@ -256,14 +255,3 @@ editForm.addEventListener('submit' , (e) => {
 //   e.preventDefault();
 //   dashboard__menu__element.classList.toggle("hidden");
 // });
-
-
-
-
-
-
-
-
-
-
-
